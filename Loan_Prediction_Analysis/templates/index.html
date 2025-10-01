@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+    <h1>Loan Approval Predictor</h1>
+    <form action="/predict" method="POST">
+        Gender (Male/Female): 
+        <input type="text" name="gender" value="{{ gender }}"><br>
+
+        Married (Yes/No): 
+        <input type="text" name="married" value="{{ married }}"><br>
+
+        Dependents (0/1/2/3+): 
+        <input type="text" name="dependents" value="{{ dependents }}"><br>
+
+        Education (Graduate/Not Graduate): 
+        <input type="text" name="education" value="{{ education }}"><br>
+
+        Self Employed (Yes/No): 
+        <input type="text" name="self_employed" value="{{ self_employed }}"><br>
+
+        Credit History (Yes/No): 
+        <input type="text" name="credit_history" value="{{ credit_history }}"><br>
+
+        Property Area (Rural/Urban/Semiurban): 
+        <input type="text" name="property_area" value="{{ property_area }}"><br>
+
+        Applicant Income (INR in Thousands): 
+        <input type="text" name="applicant_income" value="{{ applicant_income }}"><br>
+
+        Loan Amount (INR in Thousands): 
+        <input type="text" name="loan_amount" value="{{ loan_amount }}"><br>
+
+        Loan Amount Term (Months): 
+        <input type="text" name="loan_amount_term" value="{{ loan_amount_term }}"><br>
+        <!-- Result display -->
+        {% if result %}
+            <div class="result-box {% if result == 'Approved' %}approved{% else %}rejected{% endif %}">
+                {{ result }}
+            </div>
+        {% endif %}
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

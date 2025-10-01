@@ -1,0 +1,91 @@
+/* General page styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Form container */
+form {
+    background-color: #ffffffcc;
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 20px;
+}
+
+/* Form heading */
+h1 {
+    grid-column: 1 / -1;
+    color: #333;
+    margin-bottom: 30px;
+    margin-right: 7vw;
+    font-size: 28px;
+    text-align: center;
+}
+
+/* Labels */
+label {
+    font-weight: 600;
+    color: #333;
+    text-align: right;
+    padding-right: 10px;
+}
+
+/* Input fields */
+input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 8px rgba(79, 172, 254, 0.5);
+    outline: none;
+}
+
+/* Submit button */
+input[type="submit"] {
+    grid-column: 1 / -1;
+    background: #4facfe;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: #00f2fe;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.result-box {
+    grid-column: 1 / -1;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f8ff;
+    border-left: 5px solid #4facfe;
+    font-size: 24px;   /* Increased font size */
+    font-weight: bold;  /* Made it bold */
+    color: #333;
+    text-align: center;
+}
