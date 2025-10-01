@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Flower Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+    <h1>Iris Flower Predictor</h1>
+    <form action="/predict" method="POST">
+        Sepal Length: <input type="text" name="sepal_length" value="{{ sepal_length }}"><br>
+        Sepal Width: <input type="text" name="sepal_width" value="{{ sepal_width }}"><br>
+        Petal Length: <input type="text" name="petal_length" value="{{ petal_length }}"><br>
+        Petal Width: <input type="text" name="petal_width" value="{{ petal_width }}"><br>
+
+        Class: {{ result }} <br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

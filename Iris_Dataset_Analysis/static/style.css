@@ -1,0 +1,80 @@
+/* General page styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Form container */
+form {
+    background-color: #ffffffcc;
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Form headings */
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    margin-right: 8vw;
+}
+
+/* Input fields */
+input[type="text"] {
+    width: 90%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 8px rgba(79, 172, 254, 0.5);
+    outline: none;
+}
+
+/* Submit button */
+input[type="submit"] {
+    background: #4facfe;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: #00f2fe;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Labels and text */
+label, span {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Result styling */
+.result-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f0f8ff;
+    border-left: 5px solid #4facfe;
+    font-size: 18px;
+    color: #333;
+}
